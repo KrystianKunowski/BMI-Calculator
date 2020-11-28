@@ -5,36 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./site.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Martel:wght@600&display=swap" rel="stylesheet">
     <title>BMI Calculator</title>
 </head>
 <body>
-<div class="text">
-<h1>BMI Calculator</h1>
-<h3>Using JS, CSS and HTML</h3>
-</div>
-<div class="para">
-<p>Your Height (cm)</p>
-<p>Your Weight (kg)</p>
+
+    <div class="jumbotron jumbotron-fluid text-center alert-primary">
+        <div class="container">
+          <h1 class="display-4 class_title_font">BMI Calculator</h1>
+          <p class="lead">Body mass index (BMI) is a value derived from the mass (weight) and height of a person</p>
+          <p class="lead">Application was written using : HTML , CSS + BOOTSTRAP v4.5 and Java Script</p>
+        </div>
+      </div>
+
+<div class="container">      
+    <form>
+    <div class="form-group row">
+      <label for="height" class="col-sm-2 col-form-label">Your Height (cm) : </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="height" placeholder="please enter the height">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="weight" class="col-sm-2 col-form-label">Your Weight (kg) :</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="weight" placeholder="please enter the weight">
+      </div>
+    </div>
+  </form>
+  <button type="button" class="btn btn-primary btn-lg btn-block class_title_font" onClick="bmi()">Calculate BMI</button>
 </div>
 
-<div class="input1">
-<input type = "text" id = "height" />
-</div>
-<div class="input2">
-<input type = "text" id = "weight" />
+<div class="container text-center pt-5">
+    <div class="alert alert-light font-weight-bold"  id="messagePanel" role="alert">
+      </div>
 </div>
 
-
-<div class="buttonDiv">
-<button id="calculate" onClick="bmi()">Calculate BMI</button>
-</div>
-
-<div class="messagePanel" id="messagePanel">
-</div>
-
-<div class="footerDiv">
-    <p class="paraFooter">Created by Krystian Adam Kunowski</p>
-</div>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </body>
 </html>
